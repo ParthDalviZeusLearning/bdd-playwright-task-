@@ -15,7 +15,7 @@
  Login button locator was changed to a non-existent element, so Playwright could not find it.
 
  #### Failure Log 
- ` ` ` 
+ ```bash 
  Failed scenarios:
   1) Successful login with valid credentials # tests\features\login.feature:4
        When user logs in with valid credentials # tests\step-definitions\login.steps.ts:16
@@ -25,7 +25,7 @@
            
                at LoginPage.login (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\pages\LoginPage.ts:30:28)
                at async CustomWorld.<anonymous> (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\step-definitions\login.steps.ts:17:3)
- ` ` ` 
+ ```
 
  #### Screenshot Captured :
  reports\screenshots\Failure_1_Element_Not_Found.png
@@ -44,7 +44,7 @@
  The script waited for an element that never appeared, causing a timeout.
 
  #### Failure Log 
- ` ` ` 
+ ```bash 
  Failed scenarios:
   1) Successful login with valid credentials # tests\features\login.feature:4
        When user logs in with valid credentials # tests\step-definitions\login.steps.ts:16
@@ -54,7 +54,7 @@
            
                at LoginPage.login (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\pages\LoginPage.ts:29:21)
                at async CustomWorld.<anonymous> (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\step-definitions\login.steps.ts:17:3)
- ` ` ` 
+ ```
 
  #### Screenshot Captured :
   reports\screenshots\Failure_2_Timeout_Error.png
@@ -74,7 +74,8 @@
  The expected assertion text did not match the actual application message.
 
  #### Failure Log 
- ` ` ` 
+
+ ```bash 
     Failed scenarios:
     1) Successful login with valid credentials # tests\features\login.feature:4
         Then user should be navigated to dashboard # tests\step-definitions\login.steps.ts:20
@@ -106,7 +107,7 @@
                 at LoginPage.verifySuccessfulLogin (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\pages\LoginPage.ts:55:37)
                 at async CustomWorld.<anonymous> (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\step-definitions\login.steps.ts:21:3)
 
- ` ` ` 
+ ```
 
  #### Screenshot Captured :
   reports\screenshots\Failure_3_Assertion_Mismatch.png
@@ -125,7 +126,7 @@
 
  #### Failure Log 
 
- ` ` ` 
+ ```bash 
     Failed scenarios:
     1) Submit form with multiple fields # tests\features\form.feature:3
         When user fills the form with following data: # tests\step-definitions\form.steps.ts:11
@@ -142,7 +143,7 @@
                 at FormPage.fillForm (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\pages\FormPage.ts:50:18)
                 at async CustomWorld.<anonymous> (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\step-definitions\form.steps.ts:20:3)
 
- ` ` ` 
+ ```
 
  #### Screenshot Captured :
   reports\screenshots\Failure_4_Incorrect_Locator.png
@@ -161,7 +162,7 @@
 
  #### Failure Log 
 
- ` ` ` 
+ ```bash
     2) Successful login with valid credentials # tests\features\login.feature:4
         Given user is on login page # tests\step-definitions\login.steps.ts:10
             page.goto: Timeout 30000ms exceeded.
@@ -187,7 +188,7 @@
                 at LoginPage.navigateToLoginPage (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\pages\LoginPage.ts:23:21)
                 at CustomWorld.<anonymous> (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\step-definitions\login.steps.ts:13:19)
 
- ` ` ` 
+ ``` 
  #### Screenshot Captured :
   reports\screenshots\Failure_5_Navigation_Failure.png
 
@@ -206,7 +207,7 @@
  The page load timeout was set too low for the page to open.
 
  #### Failure Log 
-
+ ```bash
  Failed scenarios:
   1) Submit form with multiple fields # tests\features\form.feature:3
        Given user is on form page # tests\step-definitions\form.steps.ts:6
@@ -218,7 +219,7 @@
                
                FormPage.navigateToFormPage (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\pages\FormPage.ts:21:21)
                at CustomWorld.<anonymous> (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\step-definitions\form.steps.ts:8:18)
- 
+ ```
  #### Screenshot Captured :
   reports\screenshots\Timeout_1_Page_Load_Timeout.png
 
@@ -235,7 +236,7 @@
   The script waited for an element that never appeared on the page.
 
  #### Failure Log 
-
+ ```bash
  Failed scenarios:
   1) Successful login with valid credentials # tests\features\login.feature:4
        When user logs in with valid credentials # tests\step-definitions\login.steps.ts:16
@@ -245,7 +246,7 @@
            
                at LoginPage.login (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\pages\LoginPage.ts:29:21)
                at async CustomWorld.<anonymous> (C:\Users\Parth.Dalvi\BDD_Training_Task\tests\step-definitions\login.steps.ts:17:3)
-
+```
  #### Screenshot Captured :
   reports\screenshots\Timeout_2_Element_Timeout.png
 
@@ -263,7 +264,7 @@
  The step execution time exceeded the configured Cucumber timeout.
 
  #### Failure Log 
-
+ ```bash 
  Failed scenarios:
   1) Successful login with valid credentials # tests\features\login.feature:4
        When user logs in with valid credentials # tests\step-definitions\login.steps.ts:20
@@ -271,6 +272,6 @@
                at Timeout.<anonymous> (C:\Users\Parth.Dalvi\BDD_Training_Task\node_modules\@cucumber\cucumber\src\time.ts:50:14)
                at listOnTimeout (node:internal/timers:605:17)
                at processTimers (node:internal/timers:541:7)
-
+ ```
  #### Screenshot Captured :
  reports\screenshots\Timeout_3_Step_Timeout.png
