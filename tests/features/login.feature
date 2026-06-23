@@ -2,6 +2,10 @@ Feature: Login functionality
 
     @smoke
     Scenario: Successful login with valid credentials
+        
+        Given user is on login page
+        When user logs in with valid credentials
+        Then user should be navigated to dashboard
 
     @invalid
     Scenario: Invalid login attempt

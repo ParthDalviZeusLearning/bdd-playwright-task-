@@ -2,7 +2,9 @@ import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber";
 import { expect } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage";
 import { users } from "../testData/user";
-setDefaultTimeout(60*10*100);
+import { TIMEOUTS } from "../utils/constants";
+
+setDefaultTimeout(TIMEOUTS.DEFAULT);
 
 let loginPage!: LoginPage;
 
@@ -17,17 +19,15 @@ When("user logs in with valid credentials", async function () {
 });
 
 Then("user should be navigated to dashboard", async function () {
-  expect(await loginPage.isSecureAreaVisible()).toBeTruthy();
+  await loginPage.verifySuccessfulLogin();
 });
 
 When("user enters invalid credentials", async function () {
-  await loginPage.login(users.invalidUser.username , users.invalidUser.password);
+  await loginPage.login(users.invalidUser.username, users.invalidUser.password);
 });
 
 Then("error message should be displayed", async function () {
-  const message = await loginPage.getFlashMessage();
-
-  expect(message).toContain("Your username is invalid!");
+  await loginPage.verifyInvalidLogin();
 });
 
 Given("user is logged in", async function () {
@@ -35,7 +35,7 @@ Given("user is logged in", async function () {
 
   await loginPage.navigateToLoginPage();
 
-  await loginPage.login(users.validUser.username , users.validUser.password);
+  await loginPage.login(users.validUser.username, users.validUser.password);
 });
 
 When("user clicks logout button", async function () {
@@ -43,9 +43,7 @@ When("user clicks logout button", async function () {
 });
 
 Then("user should be redirected to login page", async function () {
-  const message = await loginPage.getFlashMessage();
-
-  expect(message).toContain("You logged out");
+  await loginPage.verifySuccessfulLogout();
 });
 
 When(
@@ -56,11 +54,5 @@ When(
 );
 
 Then("login result should be {string}", async function (result: string) {
-  if (result === "success") {
-    expect(await loginPage.isSecureAreaVisible()).toBeTruthy();
-  } else {
-    const message = await loginPage.getFlashMessage();
-
-    expect(message.toLowerCase()).toContain("invalid");
-  }
+  await loginPage.verifyLoginResult(result);
 });

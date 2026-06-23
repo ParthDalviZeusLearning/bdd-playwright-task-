@@ -1,0 +1,551 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "form-submission-using-datatable;submit-form-with-multiple-fields",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Submit form with multiple fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 736080700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user is on form page",
+            "match": {
+              "location": "tests\\step-definitions\\form.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1928407700
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "field",
+                      "value"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "name",
+                      "Parth"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "email",
+                      "parth123@zeus.com"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "currentAddress",
+                      "Mumbai"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "permanentAddress",
+                      "Thane"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user fills the form with following data:",
+            "match": {
+              "location": "tests\\step-definitions\\form.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 282378600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "form should be submitted successfully",
+            "match": {
+              "location": "tests\\step-definitions\\form.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66034499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 356923300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "form-submission-using-datatable",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Form submission using DataTable",
+    "tags": [],
+    "uri": "tests\\features\\form.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-functionality;successful-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Successful login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 802044500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user is on login page",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3910853299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "user logs in with valid credentials",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 700107599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "user should be navigated to dashboard",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36338900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 336838799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;invalid-login-attempt",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Invalid login attempt",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 758284900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "user is on login page",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2896654200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "user enters invalid credentials",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 601503800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "error message should be displayed",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55989599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 318298100
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@invalid",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;verify-error-message-visibility",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Verify error message visibility",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 734527000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "user is on login page",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17401040300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "user enters invalid credentials",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 701636000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "error message should be displayed",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60048899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 316360399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 17
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;verify-logout-functionality",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Verify logout functionality",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 709857799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "user is logged in",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3473997400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "user clicks logout button",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 592026599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "user should be redirected to login page",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42027600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 316745600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@logout",
+            "line": 24
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;login-with-multiple-credentials",
+        "keyword": "Scenario Outline",
+        "line": 40,
+        "name": "Login with multiple credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 767013200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "user is on login page",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3509565399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "user enters \"tomsmith\" and \"SuperSecretPassword!\"",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 632439400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "login result should be \"success\"",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33041799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 299564400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@outline",
+            "line": 31
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality;login-with-multiple-credentials",
+        "keyword": "Scenario Outline",
+        "line": 41,
+        "name": "Login with multiple credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 749465199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "user is on login page",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2835138800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "user enters \"tomsmith\" and \"wrong123\"",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 581774399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "login result should be \"failure\"",
+            "match": {
+              "location": "tests\\step-definitions\\login.steps.ts:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49148099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 287251599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@outline",
+            "line": 31
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login functionality",
+    "tags": [],
+    "uri": "tests\\features\\login.feature"
+  }
+]
