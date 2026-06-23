@@ -71,7 +71,7 @@ BDD_Training_Task/
 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ParthDalviZeusLearning/bdd-playwright-task- 
 cd BDD_Training_Task
 ```  
 
